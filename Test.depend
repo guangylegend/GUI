@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1372583971 source:c:\users\legend\documents\github\gui\button.cpp
+	"Button.h"
+
+1372583831 source:c:\users\legend\documents\github\gui\control.cpp
+	"Control.h"
+
+1155368372 source:c:\users\legend\documents\github\gui\freetype.cpp
+	"freetype.h"
+
+1372585768 source:c:\users\legend\documents\github\gui\main.cpp
+	"Render.h"
+
+1371735667 source:c:\users\legend\documents\github\gui\perlin.cpp
+	"Perlin.h"
+
+1372585629 source:c:\users\legend\documents\github\gui\render.cpp
+	"Render.h"
+
+1091099504 source:c:\users\legend\documents\github\gui\vector3d.cpp
+	"VECTOR3D.h"
+	<math.h>
+

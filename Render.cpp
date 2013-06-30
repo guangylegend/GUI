@@ -55,7 +55,7 @@ void Render::makelist()
     glNewList(listname[listname.size()-1],GL_COMPILE);
     glBegin(GL_TRIANGLE_FAN);
     glVertex3f(0.0,0.0,0.0);
-    for(int i=0; i<=32; ++i)glVertex3f(cos(2*pi/32*i),sin(2*pi/32*i),0.0);
+    for(int i=0; i<=64; ++i)glVertex3f(cos(2*pi/64*i),sin(2*pi/64*i),0.0);
     glEnd();
 
     glEndList();
@@ -137,7 +137,7 @@ static void Render::keyup(unsigned char key, int x, int y)
 static void Render::display()
 {
 //-----------------------------------------------------------//
-    //renpointer->testkey();
+    renpointer->testkey();
 //-----------------------------------------------------------//
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
@@ -154,10 +154,18 @@ static void Render::display()
         }
         else if(renpointer->button[i]->getshape()==1)
         {
-            glScalef(renpointer->button[i]->getradius(),renpointer->button[i]->getradius(),1.0);
+            glScalef(renpointer->button[i]->getheight(),renpointer->button[i]->getheight(),1.0);
             glCallList(renpointer->listname[1]);
         }
         glPopMatrix();
+
+        renpointer->our_font.clean();
+        renpointer->our_font.init("resources\\fonts\\test.TTF",renpointer->button[i]->getfontsize());
+        glColor3f(renpointer->button[i]->getfontcolorr(),renpointer->button[i]->getfontcolorg(),renpointer->button[i]->getfontcolorb());
+        freetype::print(renpointer->our_font,
+        renpointer->button[i]->getpositionx()-renpointer->button[i]->getfontsize()*renpointer->button[i]->getstring().size()/3,
+        renpointer->Window_Height-renpointer->button[i]->getpositiony()-renpointer->button[i]->getfontsize()/2,
+        renpointer->button[i]->getstring().c_str());
     }
 
 //-----------------------------------------------------------//
@@ -173,7 +181,7 @@ int Render::Init(int argc, char *argv[])
     glutInitWindowPosition(100,100);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH );
 
-    glutCreateWindow("GLUT");
+    glutCreateWindow("Test");
 
     memset(keystate,0,sizeof(keystate));
 
@@ -227,7 +235,7 @@ void Render::MainLoop()
 
 Button* Render::CreateButton(GLfloat x,GLfloat y,GLfloat r,GLfloat g,GLfloat b)
 {
-    Button* bt = new Button(x,y,r,g,b,"Quad",20,20);
+    Button* bt = new Button(x,y,r,g,b,"Quad",20,20,"");
     button.push_back(bt);
     return bt;
 }
