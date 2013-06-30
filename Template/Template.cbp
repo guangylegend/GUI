@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Template" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="./Template" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="./" />
+				<Option object_output="./obj" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-I./include" />
+				</Compiler>
+				<Linker>
+					<Add library="opengl32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="./Template" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="./" />
+				<Option object_output="./obj" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-I./" />
+		</Compiler>
+		<Linker>
+			<Add library="glut32" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+			<Add library="winmm" />
+			<Add library="gdi32" />
+			<Add library="libfreetype" />
+			<Add library="FreeImage" />
+			<Add directory="./lib/" />
+		</Linker>
+		<Unit filename="ArcBall.cpp" />
+		<Unit filename="FreeType.cpp" />
+		<Unit filename="Perlin.cpp" />
+		<Unit filename="Vector3D.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

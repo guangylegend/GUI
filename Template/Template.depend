@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1155368372 source:d:\学习资料\opengl projects\template\freetype.cpp
+	"freetype.h"
+
+1091099504 source:d:\学习资料\opengl projects\template\vector3d.cpp
+	"VECTOR3D.h"
+	<math.h>
+
+1371734908 source:d:\学习资料\opengl projects\template\main.cpp
+	<windows.h>
+	"FreeImagePlus.h"
+	"GL/glut.h"
+	"GL/glext.h"
+	<stdlib.h>
+	<vector>
+	<stdio.h>
+	<string>
+	<iostream>
+	<fstream>
+	<cmath>
+	<stdarg.h>
+	<string>
+	"Vector3D.h"
+	"ArcBall.h"
+	"FreeType.h"
+	"Perlin.h"
+
+1370665042 source:d:\学习资料\opengl projects\template\arcball.cpp
+	"math.h"
+	"ArcBall.h"
+
+1371735667 source:d:\学习资料\opengl projects\template\perlin.cpp
+	"Perlin.h"
+
