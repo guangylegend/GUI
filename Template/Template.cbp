@@ -48,9 +48,11 @@
 			<Add library="FreeImage" />
 			<Add directory="./lib/" />
 		</Linker>
-		<Unit filename="ArcBall.cpp" />
+		<Unit filename="Button.cpp" />
+		<Unit filename="Control.cpp" />
 		<Unit filename="FreeType.cpp" />
 		<Unit filename="Perlin.cpp" />
+		<Unit filename="Render.cpp" />
 		<Unit filename="Vector3D.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

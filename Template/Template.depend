@@ -32,3 +32,25 @@
 1371735667 source:d:\Ñ§Ï°×ÊÁÏ\opengl projects\template\perlin.cpp
 	"Perlin.h"
 
+1155368372 source:c:\users\legend\documents\github\gui\template\freetype.cpp
+	"freetype.h"
+
+1371735667 source:c:\users\legend\documents\github\gui\template\perlin.cpp
+	"Perlin.h"
+
+1091099504 source:c:\users\legend\documents\github\gui\template\vector3d.cpp
+	"VECTOR3D.h"
+	<math.h>
+
+1372579296 source:c:\users\legend\documents\github\gui\template\button.cpp
+	"Button.h"
+
+1372576679 source:c:\users\legend\documents\github\gui\template\control.cpp
+	"Control.h"
+
+1372579657 source:c:\users\legend\documents\github\gui\template\main.cpp
+	"Render.h"
+
+1372579702 source:c:\users\legend\documents\github\gui\template\render.cpp
+	"Render.h"
+
